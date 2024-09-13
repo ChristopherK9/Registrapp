@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
+/** @title Simple form field */
 @Component({
   selector: 'app-input-user',
-  templateUrl: './input-user.component.html',
-  styleUrls: ['./input-user.component.scss'],
+  templateUrl: 'input-user.component.html',
+  styleUrl: 'input-user.component.scss',
+  standalone: true,
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class InputUserComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
-
-}
+export class InputUserComponent {}

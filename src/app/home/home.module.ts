@@ -6,7 +6,8 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { InputPasswordComponent } from '../components/input-password/input-password.component';
-
+import { InputUserComponent } from '../components/input-user/input-user.component';
+import { BtnLoginComponent } from '../components/btn-login/btn-login.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,9 @@ import { InputPasswordComponent } from '../components/input-password/input-passw
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    InputPasswordComponent
+    InputPasswordComponent,
+    InputUserComponent,
+    BtnLoginComponent,
   ],
   declarations: [HomePage]
 })
