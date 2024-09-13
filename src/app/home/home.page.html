@@ -1,19 +1,22 @@
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <div id="login-container">
-    <form>
-      <ion-item>
-        <ion-label position="floating">Usuario</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password" required></ion-input>
-      </ion-item>
-      <ion-button expand="block" color="secondary" routerLink="/home">Iniciar Sesión</ion-button>
-    </form>
-    <p>
-      <a routerLink="/olvidar-contra">¿Olvidaste tu contraseña?</a>
-    </p>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input type="text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="rutaBienvenido()">Login</ion-button>
+        <a href="/olvidar-contra">Olvidaste tu contraseña?</a>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

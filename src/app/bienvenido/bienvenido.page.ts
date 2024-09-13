@@ -1,22 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-bienvenido',
   templateUrl: './bienvenido.page.html',
   styleUrls: ['./bienvenido.page.scss'],
 })
 export class BienvenidoPage implements OnInit {
-  reciveData: string = 'hola';
+  username: string = '';
   constructor(
-    private router: Router
-  ) { }
+    private router: Router,
+    private dataService: DataService
+) { }
 
   ngOnInit() {
-    const navigation = this.router.getCurrentNavigation();
-    if (navigation?.extras.state) {
-      this.reciveData = navigation?.extras.state['data'];
-    }
+    this.username = this.dataService.asignarNombre();
   }
 
 }
