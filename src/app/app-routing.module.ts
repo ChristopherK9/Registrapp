@@ -10,13 +10,14 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
-    path: 'bienvenido',
-    loadChildren: () => import('./bienvenido/bienvenido.module').then( m => m.BienvenidoPageModule)
   },
   {
     path: 'bienvenido',
     loadChildren: () => import('./bienvenido/bienvenido.module').then( m => m.BienvenidoPageModule)
+  },
+  {
+    path: 'olvidar-contra',
+    loadChildren: () => import('./olvidar-contra/olvidar-contra.module').then( m => m.OlvidarContraPageModule)
   },
 
 ];
